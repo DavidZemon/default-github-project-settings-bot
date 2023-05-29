@@ -4,12 +4,12 @@ import os
 import jwt
 import time
 
-PRIVATE_KEY_FILE_PATH = os.getenv('KEY_FILE_PATH', 'key.pem')  # This is a file. Should it be a secret or volume?
+PRIVATE_KEY_FILE_PATH = os.getenv('KEY_FILE_PATH', 'key.pem')
 APP_ID = '309928'
 
 
 def generate():
-    # Open PEM
+    # Read the key
     with open(PRIVATE_KEY_FILE_PATH, 'rb') as pem_file:
         signing_key = jwt.jwk_from_pem(pem_file.read())
 
