@@ -5,7 +5,7 @@ import jwt
 import time
 
 PRIVATE_KEY_FILE_PATH = os.getenv('KEY_FILE_PATH', 'key.pem')
-APP_ID = '309928'
+APP_ID = os.getenv('APP_ID', '340328')
 
 
 def generate():
@@ -16,8 +16,8 @@ def generate():
     payload = {
         # Issued at time
         'iat': int(time.time()),
-        # JWT max expiration time is 10 minutes in the future. Below is number of seconds
-        #TODO Might be Good to cache this value so we don't regenerate every time
+        # JWT max expiration time is 10 minutes in the future. Server time can fall out of sync, so make the actual
+        # expiration significantly less than 10 minutes in case the GH server clock is behind our clock
         'exp': int(time.time()) + 400,
         # GitHub App's identifier
         'iss': APP_ID
