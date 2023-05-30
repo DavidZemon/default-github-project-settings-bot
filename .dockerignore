@@ -1,3 +1,7 @@
 .idea/
 .git/
-.venv
+.venv/
+venv/
+*.iml
+*.pem
+*.private.env.json

@@ -9,3 +9,15 @@ GET https://api.github.com/repos/tokenize-inc/protocol/rulesets/24414
 Accept: application/vnd.github+json
 Authorization: Bearer {{ auth_token }}
 X-GitHub-Api-Version: 2022-11-28
+
+### Get general repo settings
+GET https://api.github.com/repos/tokenize-inc/delete-me
+Accept: application/vnd.github+json
+Authorization: Bearer {{ auth_token }}
+X-GitHub-Api-Version: 2022-11-28
+
+### Get repo autolinks
+GET https://api.github.com/repos/tokenize-inc/ring-legacy/autolinks
+Accept: application/vnd.github+json
+Authorization: Bearer {{ auth_token }}
+X-GitHub-Api-Version: 2022-11-28
