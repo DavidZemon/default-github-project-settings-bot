@@ -21,3 +21,15 @@ GET https://api.github.com/repos/tokenize-inc/ring-legacy/autolinks
 Accept: application/vnd.github+json
 Authorization: Bearer {{ auth_token }}
 X-GitHub-Api-Version: 2022-11-28
+
+### Get branch protection
+GET https://api.github.com/repos/tokenize-inc/token-utils-rs/branches/main/protection
+Accept: application/vnd.github+json
+Authorization: Bearer {{ auth_token }}
+X-GitHub-Api-Version: 2022-11-28
+
+### Get branches
+GET https://api.github.com/repos/tokenize-inc/token-utils-rs/branches
+Accept: application/vnd.github+json
+Authorization: Bearer {{ auth_token }}
+X-GitHub-Api-Version: 2022-11-28
